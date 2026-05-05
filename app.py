@@ -14,6 +14,19 @@ import os
 import pandas as pd
 from datetime import datetime
 
+# Download model from Google Drive if not exists
+import gdown
+import os
+
+MODEL_PATH = 'models/hemanet_model.pth'
+MODEL_URL = "https://drive.google.com/file/d/1BgRfJQb4ZfxYmLMAHM-ldWEus2vgCRoO/view?usp=sharing"  # Replace with your file ID
+
+if not os.path.exists(MODEL_PATH):
+    os.makedirs('models', exist_ok=True)
+    with st.spinner("Downloading model (42 MB)... This may take a minute"):
+        gdown.download(MODEL_URL, MODEL_PATH, quiet=False)
+    st.success("✅ Model downloaded!")
+
 # ============= PAGE CONFIGURATION =============
 st.set_page_config(
     page_title="Hema Net-X - Multi-Patient Batch Analysis",
