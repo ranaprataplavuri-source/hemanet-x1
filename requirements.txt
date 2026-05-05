@@ -8,3 +8,4 @@ opencv-python-headless
 matplotlib
 pandas
 h5py
+gdown
