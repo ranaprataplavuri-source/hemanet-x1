@@ -1,2 +1,10 @@
-libgl1
+libgl1-mesa-glx
 libglib2.0-0
+libsm6
+libxrender1
+libfontconfig1
+libice6
+pkg-config
+ffmpeg
+xvfb
+procps
